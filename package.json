@@ -1,0 +1,17 @@
+{
+  "name": "tiktok-wallet-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Installable TikTok wallet demo with admin panel and live TikTok profile fetch fallback",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  }
+}

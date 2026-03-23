@@ -1,0 +1,77 @@
+
+<!-- LIVE REWARDS PAGE -->
+<div id="rewardsPage" class="page active">
+  <header class="top-bar">
+    <button class="bar-btn" id="openToolboxBtn" title="Toolbox">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <span class="bar-title">LIVE rewards</span>
+    <button class="bar-btn" id="openLoginBtn" title="Account">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+    </button>
+  </header>
+
+  <!-- Identity verified banner -->
+  <div class="mx-3 mt-2 bg-white rounded-xl p-4">
+    <div class="font-bold text-sm text-black">Identity verified</div>
+    <div class="text-xs text-gray-500 mt-1">Your identity is verified. You can continue with transactions.</div>
+  </div>
+
+  <!-- Available / Upcoming rewards row -->
+  <div class="mx-3 mt-2 bg-white rounded-xl p-4 flex">
+    <div class="flex-1 border-r border-gray-200 pr-4">
+      <div class="text-xs text-gray-500">Available rewards</div>
+      <div class="text-sm font-bold text-black mt-1" id="availRewardSmall">USD9,692,068.00</div>
+    </div>
+    <div class="flex-1 pl-4">
+      <div class="text-xs text-gray-500">Upcoming rewards</div>
+      <div class="text-sm font-bold mt-1 flex items-center gap-1" style="color:#e53935" id="upcomingRewardSmall">
+        <span style="display:inline-block;width:8px;height:8px;background:#e53935;border-radius:50;"></span>
+        USD2,000,000.00
+      </div>
+    </div>
+  </div>
+
+  <!-- Big balance card -->
+  <div class="mx-3 mt-2 bg-white rounded-xl p-5 text-center">
+    <div class="text-sm text-gray-500 mb-1">Available rewards</div>
+    <div class="flex items-baseline justify-center">
+      <span class="text-sm text-gray-500 mr-1">USD</span>
+      <span class="font-black text-black" style="font-size:42px;line-height:1" id="balanceWhole">9,692,068</span>
+      <span class="text-lg text-gray-500" id="balanceCents">.00</span>
+    </div>
+    <button class="w-full mt-4 text-white font-bold py-3 rounded-full text-base" id="goTransferBtn" style="background:linear-gradient(135deg,#ff4d6a,#e8344e);box-shadow:0 4px 14px rgba(229,57,53,0.35)">Transfer</button>
+    <button class="w-full mt-3 font-bold py-3 rounded-full text-base border-2 border-gray-800 text-gray-800 bg-white" id="exchangeBtn">Exchange</button>
+    <div class="flex justify-between items-center mt-4 text-xs text-gray-500">
+      <span>Daily transfer limit (Remain/Total)</span>
+      <span class="font-bold text-black" id="dailyLimitText">$9.7M/$10.0M</span>
+    </div>
+    <div class="text-left text-xs mt-1"><a href="#" class="text-red-500 font-medium">How to increase transfer limit? ›</a></div>
+  </div>
+
+  <!-- Transactions section -->
+  <div class="mx-3 mt-2 bg-white rounded-xl px-4 pt-4 pb-2">
+    <div class="font-bold text-lg text-black mb-3">Transactions</div>
+    <div class="flex items-center gap-4 mb-3 text-xs text-gray-500">
+      <div class="flex items-center gap-1">
+        <span class="font-bold text-black text-sm" id="txMonthLabel">Mar<br>2026</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+      <div>
+        <span class="text-gray-400">In:</span><br>
+        <span class="text-black font-medium" id="inStat">USD9,692,068.00</span>
+      </div>
+      <div>
+        <span class="text-gray-400">Out:</span><br>
+        <span class="text-black font-medium" id="outStat">USD281,132.00</span>
+      </div>
+    </div>
+    <div id="txList"></div>
+  </div>
+
+  <!-- Success toast (slides down from top) -->
+  <div class="success-toast" id="successToast">
+    <div class="font-bold text-base">Money sent successfully</div>
+    <div class="text-sm text-gray-500 mt-1" id="successToastText">1,000.00 USD sent to @username</div>
+  </div>
+</div>
